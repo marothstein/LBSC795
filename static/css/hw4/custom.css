@@ -1,0 +1,71 @@
+/* ==|== primary styles =====================================================
+   Author: Matthew Rothstein
+   ========================================================================== */
+#main {
+	width: 80%; 
+	margin: 0 auto;
+}
+
+#main p {
+	width: 100%;
+	
+}
+/*********************************************************************/
+/* MISC / GENERAL STYLES */
+/*********************************************************************/
+h1 {
+	margin-bottom: 5px;
+}
+
+h3 {
+	margin-top: -40px;
+}
+
+.download_link {
+	color: #E44D26;
+	font-size: .5em;
+}
+
+h1 {
+  font-family: bello-pro-1,bello-pro-2,sans-serif;
+}
+
+
+figure { 
+	border: 0; 
+	overflow: hidden;
+	
+	margin-bottom: 20px;
+}
+
+figure img {
+	border: 5px solid #E44D26;
+	border-bottom: 1px solid #E44D26;
+	margin: 0;
+}
+
+figcaption {
+	text-align: center;
+	
+	background-color: #E44D26;
+	color:  white;
+	font-weight: bold;
+	
+	margin-top: -5px;
+	
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+/* specific figures */
+figure#screenshot1 {
+	width: 241px;
+}
+
+figure#screenshot2 img {
+	width: 900px;
+}
+
+figure#screenshot2 {
+	width: 910px;
+}

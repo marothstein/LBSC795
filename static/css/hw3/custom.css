@@ -1,0 +1,365 @@
+/* ==|== primary styles =====================================================
+   Author: Matthew Rothstein
+   ========================================================================== */
+#main {
+	width: 80%; 
+	margin: 0 auto;
+}
+
+#interface_wrapper { border: 0px; }
+
+#interface_area { }
+#interface_area header { width: auto; margin-bottom: 0; padding-bottom: 0; -webkit-box-shadow: 0 0px 0px 0px #AAA; box-shadow: 0 0px 0px 0px #AAA; }
+
+/* Main Widget Styles */
+#pizza_widget{ overflow: hidden; background-color: rgb(243,169,19); }
+#pizza_widget header {}
+
+/* Widget Control Styles */
+#pizza_widget #interface_wrapper { position: relative; }
+#pizza_widget #pizza_view { float: left; width: 70%; border: 0px blue solid; }
+#pizza_widget #pizza_view header { width: auto; -webkit-box-shadow: 0 0px 0px 0px #AAA; box-shadow: 0 0px 0px 0px #AAA; }
+#pizza_widget aside#pizza_controls { width: auto; float: none; border: 0px solid gray; }
+#pizza_widget aside#topping_controls { width: auto; position: absolute; top: 0; right: 0; border: 0px solid gray; }
+
+
+
+/* Widget Main View Styles */
+#pizza_widget section#pizza_view {}
+
+/* General Widget-specific styles */
+section.controls_section { overflow: hidden; }
+.controls_row { overflow: hidden; }
+.button_wrapper { float: left; }
+button { border: 0; background: none; }
+details { position: absolute; float: left; display: none; }
+
+/*********************************************************************/
+/* MISC / GENERAL STYLES */
+/*********************************************************************/
+.center { margin: 0 auto; }
+input[type="checkbox"],
+input[type="radio"] { 
+	display: none; 
+}
+
+h1 {
+  font-family: bello-pro-1,bello-pro-2,sans-serif;
+}
+/*********************************************************************/
+/* TEST STYLES */
+/*********************************************************************/
+#test_pane { 
+	display: none;
+	
+	position: fixed; 
+	background-color: lightblue;
+	
+	left: 0px; 
+	top: 10px; 
+	
+	min-height: 15px;
+	width: 400px; 
+	
+	padding: 10px; 
+	
+	opacity: 0.85;
+	
+	font-size: 15px;
+	font-weight: bold; 
+	color: black;
+}
+
+
+/*********************************************************************/
+/* FOOTER / ORDER / PRICE STYLES */
+/*********************************************************************/
+#pizza_view footer { padding: 10px; overflow: hidden; border: 0px purple solid; height: 60px; }
+#pizza_view footer #pizza_info { float: left;  border: 0px blue solid; height: 100%; }
+#pizza_view footer #order_wrapper { float: right;  }
+
+#pizza_info #price_wrapper {
+	width: 150px;
+	font-size: 10px;
+	
+	height: 50px;
+	border: 0px solid rgb(122,122,122);
+	
+	position: relative;
+	
+	padding: 5px;
+	
+	background-color: white;
+	border-radius: 4px;
+	
+	-webkit-box-shadow: inset 0px 0px 8px rgba(122, 122, 122, 1);
+	-moz-box-shadow: inset 0px 0px 8px rgba(122, 122, 122, 1);
+	box-shadow: inset 0px 0px 8px rgba(122, 122, 122, 1);
+	
+}
+#pizza_info #price_wrapper p {
+	line-height: 100%; 
+	font-size: 3em; 
+	
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/*#order_wrapper button#order_pizza { border: 2px green solid; width: 120px; height: 60px; border-radius: 10px; text-indent: 0; }*/
+#order_wrapper button#order_pizza { border: 0px green solid; height: 60px; border-radius: 10px; text-indent: 0; }
+
+/*********************************************************************/
+/* PIZZA STYLES */
+/*********************************************************************/
+#pizza_view { float: left; }
+#pizza { width: 500px; height: 500px; margin: 0 auto; }
+
+#pizza div { position: relative; }
+#pizza #outer_crust { 
+	background-color: rgb(216,168,65); width: 100%; height: 100%; border-radius: 50%; 
+
+	/* the shadow should be on the outter crust for purposes of staying */
+	webkit-box-shadow: 10px 10px 10px 10px rgba(255,255,255,.3);
+	/*-moz-box-shadow: 10px 10px 10px 10px rgba(122,122,122,.3);*/
+	box-shadow: 10px 10px 10px 10px rgba(0,0,0,.3);
+}
+#pizza #outer_crust #inner_crust { background-color: rgb(238,226,199); width: 90%; height: 90%; border-radius: 50%; top: 5%; left: 5%; }
+#pizza #outer_crust #inner_crust #sauce { position: relative; background-color: rgb(95,26,19); width: 96%; height: 96%; border-radius: 50%; top: 2%; left: 2%; opacity: 1;}
+#pizza #outer_crust #inner_crust #sauce #cheese { width: 100%; height: 100%; border-radius: 50%; opacity: 1; border: 0px solid red; }
+
+#cheese { }
+#cheese.white { background-image: url('/images/hw3/cheese/white_mozzarella_texture2.png'); }
+#cheese.yellow { background-image: url('/images/hw3/cheese/yellow_see_sauce.png'); }
+#cheese.orange { background-image: url('/images/hw3/cheese/orange_see_sauce.jpg'); }
+
+/*********************************************************************/
+/* TOPPING STYLES */
+/*********************************************************************/
+.topping { width: 50px; height: 50px; }
+.topping[type="garlic"] { background-image: url('/images/hw3/toppings/garlic.png');}
+.topping[type="green_pepper"] { background-image: url('/images/hw3/toppings/green-pepper.png');}
+.topping[type="mushroom"] { background-image: url('/images/hw3/toppings/mushroom.png');}
+.topping[type="onion"] { background-image: url('/images/hw3/toppings/onion.png');}
+.topping[type="red_pepper"] { background-image: url('/images/hw3/toppings/red-pepper.png');}
+.topping[type="tomato"] { background-image: url('/images/hw3/toppings/tomato_cooked.png');}
+.topping[type="boy"] { background-image: url('/images/hw3/toppings/boy.png');}
+.topping[type="girl"] { background-image: url('/images/hw3/toppings/girl.png');}
+.topping[type="pepperoni"] { background-image: url('/images/hw3/toppings/pepperoni.png');}
+.topping[type="hamburger"] { background-image: url('/images/hw3/toppings/hamburger.png');}
+.topping[type="ham"] { background-image: url('/images/hw3/toppings/ham.png');}
+
+/*********************************************************************/
+/* PIZZA CONTROLS STYLES */
+/*********************************************************************/
+#pizza_controls { overflow: hidden; }
+#pizza_controls #size_controls { float: left; }
+#pizza_controls #crust_controls { float: right; }
+
+
+/*********************************************************************/
+/* BUTTON STYLES */
+/*********************************************************************/
+button { 
+	background: no-repeat; 
+	width: 100px; 
+	height: 100px; 
+	
+	text-indent: -99999px;
+	
+	/* test styles */
+	border: 0px lightgray solid;  
+}
+button .on { display: none; }
+
+button.selected { border: 0px red solid; }
+
+
+button img { visibility: hidden; }
+
+#interface_wrapper { 
+	border: 1px solid red; 
+	
+	overflow: hidden; 
+	
+}
+
+/* pizza-wide setting buttons */
+#small { background-image: url('/images/hw3/icons/pizza_black-icon_small.png'); }
+#small:hover { background-image: url('/images/hw3/icons/pizza_white-icon_small.png'); }
+#small.selected { background-image: url('/images/hw3/icons/pizza_white-icon_small_shadow.png'); }
+
+#medium { background-image: url('/images/hw3/icons/pizza_black-icon_med.png'); }
+#medium:hover { background-image: url('/images/hw3/icons/pizza_white-icon_med.png'); }
+#medium.selected { background-image: url('/images/hw3/icons/pizza_white-icon_med_shadow.png'); }
+
+#large { background-image: url('/images/hw3/icons/pizza_black-icon_large.png'); }
+#large:hover { background-image: url('/images/hw3/icons/pizza_white-icon_large.png'); }
+#large.selected { background-image: url('/images/hw3/icons/pizza_white-icon_large_shadow.png'); }
+
+#thin_crust { background-image: url('/images/hw3/icons/thin_crust_black-icon.png'); }
+#thin_crust:hover { background-image: url('/images/hw3/icons/thin_crust_white-icon.png'); }
+#thin_crust.selected { background-image: url('/images/hw3/icons/thin_crust_white-icon_shadow.png'); }
+
+#thick_crust { background-image: url('/images/hw3/icons/thick_crust_black-icon.png'); }
+#thick_crust:hover { background-image: url('/images/hw3/icons/thick_crust_white-icon.png'); }
+#thick_crust.selected { background-image: url('/images/hw3/icons/thick_crust_white-icon_shadow.png'); }
+
+#cheese_crust { background-image: url('/images/hw3/icons/cheese_crust_black-icon.png'); }
+#cheese_crust:hover { background-image: url('/images/hw3/icons/cheese_crust_white-icon.png'); }
+#cheese_crust.selected { background-image: url('/images/hw3/icons/cheese_crust_white-icon_shadow.png'); }
+
+#white_cheese { background-image: url('/images/hw3/icons/white_cheese_black-icon.png'); }
+#white_cheese:hover { background-image: url('/images/hw3/icons/white_cheese_white-icon.png'); }
+#white_cheese.selected { background-image: url('/images/hw3/icons/white_cheese_white-icon_shadow.png'); }
+
+#yellow_cheese { background-image: url('/images/hw3/icons/yellow_cheese_black-icon.png'); }
+#yellow_cheese:hover { background-image: url('/images/hw3/icons/yellow_cheese_white-icon.png'); }
+#yellow_cheese.selected { background-image: url('/images/hw3/icons/yellow_cheese_white-icon_shadow.png'); }
+
+#orange_cheese { background-image: url('/images/hw3/icons/orange_cheese_black-icon.png'); }
+#orange_cheese:hover { background-image: url('/images/hw3/icons/orange_cheese_white-icon.png'); }
+#orange_cheese.selected { background-image: url('/images/hw3/icons/orange_cheese_white-icon_shadow.png'); }
+
+/* topping buttons */
+#mushroom_veggies { background-image: url('/images/hw3/icons/mushroom_black-icon.png'); }
+#mushroom_veggies:hover { background-image: url('/images/hw3/icons/mushroom_white-icon.png'); }
+#mushroom_veggies.selected { background-image: url('/images/hw3/icons/mushroom_white-icon_shadow.png'); }
+
+#tomato_veggies { background-image: url('/images/hw3/icons/tomato_black-icon.png'); }
+#tomato_veggies:hover { background-image: url('/images/hw3/icons/tomato_white-icon.png'); }
+#tomato_veggies.selected { background-image: url('/images/hw3/icons/tomato_white-icon_shadow.png'); }
+
+#onion_veggies { background-image: url('/images/hw3/icons/onion_black-icon.png'); }
+#onion_veggies:hover { background-image: url('/images/hw3/icons/onion_white-icon.png'); }
+#onion_veggies.selected { background-image: url('/images/hw3/icons/onion_white-icon_shadow.png'); }
+
+#green_pepper_veggies { background-image: url('/images/hw3/icons/green_pepper_black-icon.png'); }
+#green_pepper_veggies:hover { background-image: url('/images/hw3/icons/green_pepper_white-icon.png'); }
+#green_pepper_veggies.selected { background-image: url('/images/hw3/icons/green_pepper_white-icon_shadow.png'); }
+
+#red_pepper_veggies { background-image: url('/images/hw3/icons/red_pepper_black-icon.png'); }
+#red_pepper_veggies:hover { background-image: url('/images/hw3/icons/red_pepper_white-icon.png'); }
+#red_pepper_veggies.selected { background-image: url('/images/hw3/icons/red_pepper_white-icon_shadow.png'); }
+
+#garlic_veggies { background-image: url('/images/hw3/icons/garlic_black-icon.png'); }
+#garlic_veggies:hover { background-image: url('/images/hw3/icons/garlic_white-icon.png'); }
+#garlic_veggies.selected { background-image: url('/images/hw3/icons/garlic_white-icon_shadow.png'); }
+
+#pepperoni_meat { background-image: url('/images/hw3/icons/pepperoni_black-icon.png'); }
+#pepperoni_meat:hover { background-image: url('/images/hw3/icons/pepperoni_white-icon.png'); }
+#pepperoni_meat.selected { background-image: url('/images/hw3/icons/pepperoni_white-icon_shadow.png'); }
+
+#hamburger_meat { background-image: url('/images/hw3/icons/hamburger_black-icon.png'); }
+#hamburger_meat:hover { background-image: url('/images/hw3/icons/hamburger_white-icon.png'); }
+#hamburger_meat.selected { background-image: url('/images/hw3/icons/hamburger_white-icon_shadow.png'); }
+
+#ham_meat { background-image: url('/images/hw3/icons/ham_black-icon.png'); }
+#ham_meat:hover { background-image: url('/images/hw3/icons/ham_white-icon.png'); }
+#ham_meat.selected { background-image: url('/images/hw3/icons/ham_white-icon_shadow.png'); }
+
+#baby_boy_meat { background-image: url('/images/hw3/icons/baby_boy_black-icon.png'); }
+#baby_boy_meat:hover { background-image: url('/images/hw3/icons/baby_boy_white-icon.png'); }
+#baby_boy_meat.selected { background-image: url('/images/hw3/icons/baby_boy_white-icon_shadow.png'); }
+
+#baby_girl_meat { background-image: url('/images/hw3/icons/baby_girl_black-icon.png'); }
+#baby_girl_meat:hover { background-image: url('/images/hw3/icons/baby_girl_white-icon.png'); }
+#baby_girl_meat.selected { background-image: url('/images/hw3/icons/baby_girl_white-icon_shadow.png'); }
+
+/*********************************************************************/
+/* FANCY BUTTONS STYLES */
+/*********************************************************************/
+
+a.fancy_button, button.fancy_button { 
+  background: #555; 
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(77,77,77,0.4)));  
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.4), rgba(77,77,77,0.4)); 
+  float: left; 
+  padding: 4px; 
+  text-decoration: none; 
+  outline: 0; 
+  border-width: 1px; 
+  border-style: solid;
+  width: auto;
+  overflow: visible;
+  border-color: transparent transparent #666 transparent; 
+  border-color: transparent transparent rgba(202,202,202,0.27) transparent;
+  -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px;
+  -webkit-background-clip: padding-box;
+}
+
+a.fancy_button span, button.fancy_button span { 
+  display: block; 
+  float: left;
+  letter-spacing: -1px; 
+  border-width: 1px; 
+  border-style: solid; 
+  border-color: #ccc #444 #111 #444; 
+  border-color: rgba(255,255,255,0.7) rgba(0,0,0,0.5) rgba(0,0,0,0.7) rgba(0,0,0,0.5); 
+  font: bold 21px/1em Arial;
+  color: white; 
+  padding: 0.48em 2em; 
+  cursor: pointer; 
+  text-shadow: rgba(0,0,0,0.45) 0 -1px 0; 
+  -webkit-box-shadow: rgba(0,0,0,0.75) 0px 0px 3px; -moz-box-shadow: rgba(0,0,0,0.75) 0px 0px 3px; box-shadow: rgba(0,0,0,0.75) 0px 0px 3px;
+  -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), color-stop(0.5, rgba(255,255,255,0.15)), color-stop(0.5, rgba(255,255,255,0.01)), to(transparent)); 
+  background: transparent -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.01) 50%, transparent);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorstr='#80FFFFFF', EndColorstr='#00FFFFFF'); 
+  -webkit-background-clip: padding-box;
+}
+
+a.fancy_button:hover span, button.fancy_button:hover span {  
+  border-top-color: rgba(255,255,255,0.65); 
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(220,220,220,0.6)), color-stop(0.5, rgba(100,100,100,0.2)), color-stop(0.5, rgba(0,0,0,0.21)), to(rgba(0, 0, 0, 0.20))); 
+  background: -moz-linear-gradient(top, rgba(220,220,220,0.6), rgba(100,100,100,0.2) 50%, rgba(0,0,0,0.21) 50%, rgba(0, 0, 0, 0.20));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#99dcdcdc', EndColorStr='#33000000'); 
+  -webkit-background-clip: padding-box;
+
+  /* added background-color */
+  background-color: #070;
+  /*background-color: rgb(243,86,21);*/
+}
+
+a.fancy_button:active span, button.fancy_button:active span {  
+  border-top-color: rgba(255,255,255,0.2); 
+  border-left-color: rgba(0,0,0,0.4); 
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(150,150,150,0.6)), color-stop(0.5, rgba(60,60,60,0.6)), color-stop(0.5, rgba(40,40,40,0.6)), to(rgba(20, 20, 20, 0.5))); 
+  background: -moz-linear-gradient(top, rgba(150,150,150,0.6), rgba(60,60,60,0.6) 50%, rgba(40,40,40,0.6) 50%, rgba(20, 20, 20, 0.5));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#80969696', EndColorStr='#59000000'); 
+  -webkit-box-shadow: inset 0 0 18px rgba(0,0,0,0.75), rgba(0,0,0,0.75) 0px 0px 3px; -moz-box-shadow: inset 0 0 18px rgba(0,0,0,0.75), rgba(0,0,0,0.75) 0px 0px 3px; box-shadow: inset 0 0 18px rgba(0,0,0,0.75), rgba(0,0,0,0.75) 0px 0px 3px; 
+  -webkit-background-clip: padding-box;
+
+  /* added background-color */
+  background-color: #070;
+  /*background-color: rgb(243,86,21);*/
+}
+
+a.fancy_button span:active, button.fancy_button span:active { 
+  border-top-color: rgba(255,255,255,0.2); 
+  border-left-color: rgba(0,0,0,0.4); 
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#80969696', EndColorStr='#59000000'); 
+  -webkit-background-clip: padding-box;
+
+
+  /* added background-color */
+  background-color: #070;
+  /*background-color: rgb(243,86,21);*/
+}
+
+/*********************************************************************/
+/* FANCY BUTTONS MODIFICATION STYLES */
+/*********************************************************************/
+.fancy_button span.button_text {
+	display: block;
+	
+	font-size: 26px;
+	
+  /* added background-color */
+  background-color: #070;
+  /*background-color: rgb(243,86,21);*/
+}
+
+button.fancy_button {
+	background: 0;
+
+}

@@ -1,0 +1,55 @@
+{% comment %} HOMEWORK2 TEMPLATE {% endcomment %}
+
+{% extends "../../base/base.html" %}
+
+{% block 'header' %}
+	<h1 id="title"> Matt - LBSC795 </h1>
+	{% include "../../base/nav.html" %}
+{% endblock %}
+
+{% block 'main' %}
+	<section id="homework2_container">
+		<header>
+			<h2> Homework Assignment 2 - Javascript Image Retriever </h2>
+		</header>
+		
+		<h3> Description: </h3>
+		<p class="description"> 
+			The interface below should allow users to retrieve an image by submitting a URL. NOW WITH ACCESSIBLE IMAGES!! 
+		</p>
+		<p class="description">
+			You can now hit the Enter key while focused on the url text field to fetch an image. In addition, you can tab through the image results and hit the enter key
+			to retrieve the image you're currently focused on.
+		</p>
+		
+		<h3> Interface: </h3>
+		<div id="interface_area" class="interface">
+			<p class="hint"> 
+				Hey! Please feel free to test using the following url: '<span id="example_img_uri" class="helper-info">/images/hw2/ricky.png</span>' or by clicking one of the faded images below the text box. 
+			</p>
+			<div class="interface_container">
+				<div class="controls">
+					<!-- <label for="url"> Please Enter a URL and click submit: </label> -->
+					<input id="url" name="url" type="text" placeholder="Paste the URL for an image here"/>
+					<input id="submit" type="submit" value="show me!" />
+				</div>
+				<div class="google_results_container">
+				</div>
+				<div class="image_container">
+					<img id="image" src="/images/hw2/lol-cats-cranky-bird.jpg" class="image" />
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block 'js_include_block' %}
+<script src="https://www.google.com/jsapi?key=ABQIAAAAgammcdcQjEC-B2JGNzh6DxSGDxF-UlqODumnq_WXbRjiNDs1YRTkqR5ZfwKch6VcO3UETcvb95x4fA"></script>
+<script src="/js/hw2.js"></script>
+{% endblock %}
+
+{% block 'js_run_block' %}
+<script>
+google.load( "search", 1 );
+</script>
+{% endblock %}

@@ -1,0 +1,76 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>{% block 'title' %} Matt Rothstein's LBSC795 Site {% endblock %}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css?v=1">  
+	<link rel="stylesheet" href="/css/custom.css?v=1">  
+	<link rel="stylesheet" media="handheld" href="/css/handheld.css?v=1">
+	{% block 'stylesheet_head_block' %}
+	{% endblock %}
+
+	<script src="/js/libs/modernizr-2.0.min.js"></script>
+	<script src="/js/libs/respond.min.js"></script>
+
+	{% block 'js_head_block' %}
+	{% endblock %}
+</head>
+
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+
+	<div id="container">
+		
+		<div id="header-container">
+			<header class="wrapper">
+				{% block 'header' %}
+					<h1 id="title"> Matt - LBSC795 </h1>
+					{% include "../base/nav.html" %}
+				{% endblock %}
+			</header>
+		</div>
+
+		<div id="main" class="wrapper">
+			{% block 'main' %}
+
+			{% endblock %}
+		</div>
+		
+		<div id="footer-container">
+			<footer>
+				{% block 'footer' %}
+					<h3> &copy; 2011 Matt Rothstein</h3>
+				{% endblock %}
+			</footer>
+		</div>
+		
+	</div> <!-- end of #container -->
+	
+	<script src="/js/libs/jquery-1.6.2.min.js?v=1"></script>
+	<script src="/js/script.js?v=1"></script>
+	
+
+	<!-- javascript include block -->
+	{% block 'js_include_block' %}
+	{% endblock %}
+	<!-- end javascript include block -->
+	
+	<!-- javascript run block -->
+	{% block 'js_run_block' %}
+	{% endblock %}
+	<!-- end javascript run block -->
+	
+</body>
+</html>

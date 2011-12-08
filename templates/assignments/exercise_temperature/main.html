@@ -1,0 +1,79 @@
+{% comment %} HOMEWORK2 TEMPLATE {% endcomment %}
+
+{% extends "../../base/base.html" %}
+
+{% block 'header' %}
+	<h1 id="title"> Matt - LBSC795 </h1>
+	{% include "../../base/nav.html" %}
+{% endblock %}
+
+{% block 'main' %}
+	<section id="exercise_temperature_container" class="exercise_container">
+		<header>
+			<h2> Fast User Interaction / Fitt's Law: Temperature Conversion UI  </h2>
+		</header>
+		
+		<h3> Exercise Description: </h3>
+		<p class="description"> 
+			Given an existing temperature conversion UI (pictured below), we were tasked with redesigning it for speed as determined by 
+			Fitt's Law. Our goal was to design an interface with the lowest possible average and maximum times to completion for the main 
+			task (converting temperature between two scales).
+			<figure class="original_interface">
+				<div>
+					<img src="/images/exercises/temp_converter.png" alt="Original temperature conversion interface">
+					<figcaption>
+						The original temperature conversion interface.
+					</figcaption>
+				</div>
+			</figure>
+		</p>
+		<h3> Redesign: </h3>
+		<p class="description">
+			We strove to provide a redesign that minimized <span class="term"> time to completion</span>, but wanted to remain conscious 
+			of some things we found frustrating about the original interface. For this reason, we made sure to include multiple avenues of
+			interaction that would lead the user to their goal, even if some were potentially less efficient than others. To accommodate 
+			an extremely fast and well-versed expert user, we strove to include full keyboard interaction and as much automated task handling as 
+			possible. For example, a user can choose their destination temperature scheme by either clicking a button or typing the abbreviation 
+			letter for that scheme (F for Farenheit / C for Celsius). Along the same lines, the user could initiate the conversion by either 
+			clicking the "Convert" button or hitting the enter key.
+			<figure class="original_interface">
+				<div>
+					<img src="/images/exercises/temp_ui_sketch.png" alt="New conversion interface sketch">
+					<figcaption>
+						A sketch of our proposed temperature conversion interface.
+					</figcaption>
+				</div>
+			</figure>
+		</p>
+		
+		<h3> Interface: </h3>		
+		<div id="interface_area">
+			<article id="temperature_converte" class="interface">
+				<header>
+					<h1> Temperature Converter </h1>
+				</header>
+				<div class="input_controls">
+					<input type="text" value="0fd"/>
+					<ul class="segmented-control">
+					    <li class="tempButton alt" id="f" tabindex="0"><a href="#farenheit">&deg;F</a></li>
+					    <li class="tempButton alt" id="c" tabindex="0"><a href="#celcius">&deg;C</a></li>
+					</ul>
+				</div>
+				<div class="result"> 
+					<p> Converted Temp: <span id="result">0</span> <span id="f_or_c">&deg;C</p>
+				</div>
+				<input id="convert" type="submit" class="submit" value="Convert" />
+			</article>
+		</div>
+
+		
+	</section>
+{% endblock %}
+
+{% block 'js_include_block' %}
+<script src="/js/exercises/temperature.js"></script>
+{% endblock %}
+
+
+{% block 'js_run_block' %}
+{% endblock %}

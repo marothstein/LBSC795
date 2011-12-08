@@ -1,0 +1,110 @@
+{% comment %} HOMEWORK2 TEMPLATE {% endcomment %}
+
+{% extends "../../base/base.html" %}
+
+{% block 'header' %}
+	<h1 id="title"> Matt - LBSC795 </h1>
+	{% include "../../base/nav.html" %}
+{% endblock %}
+
+{% block 'main' %}
+	<section id="homework2_container">
+		<header>
+			<h2> VoiceOver Navigation of Umd.edu  </h2>
+		</header>
+		
+		<h3> Description: </h3>
+		<p class="description"> 
+			We were tasked with finding the credit value of the HCIL Masters Capstone Project / Thesis by navigating from http://www.umd.edu with no visual input. 
+			We used only the OS/device's native accessibility features to accomplish this. I used a MacBook Pro (OSX Lion) and an iPad (1st Gen) to complete the task. Both
+			devices were equipped with Apple's VoiceOver for visually impaired users.
+		</p>
+		
+		<section id="attached_media">
+			<h3> Media: </h3>
+			<ul>
+				<li> Video 
+					<dl>
+						<dt> 
+							<div class="video">
+									<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"codebase="http://fpdownload.macromedia.com/
+								pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+									<param name="SRC" value="/video/screen_capture_part_2.swf">
+									<embed src="/video/screen_capture_part_2.swf"> </embed>
+								</object> 
+							</div>
+						</dt>
+						<dt> Jing Screen Capture <dt>
+						<dd> 
+							Screen capture video of the task being performed on a MacBook Pro. Starts after the initial search, 
+							because I recorded poorly on the first video. 
+						</dd>
+					</dl>	
+				</li>
+				<li> Audio 
+					<dl>
+						<dt>
+							<audio id="recording1" controls preload="auto">
+								<source src="/audio/recording1.ogg" type="audio/ogg" />
+								<source src="/audio/recording1.mp3" type="audio/mpeg" />
+							</audio>
+							<audio id="recording2" controls preload="auto">
+								<source src="/audio/recording2.ogg" type="audio/ogg" />
+								<source src="/audio/recording2.mp3" type="audio/mpeg" />
+							</audio>
+							<audio id="recording3" controls preload="auto">
+								<source src="/audio/recording3.ogg" type="audio/ogg" />
+								<source src="/audio/recording3.mp3" type="audio/mpeg" />
+							</audio>
+							<audio id="recording4" controls preload="auto">
+								<source src="/audio/recording4.ogg" type="audio/ogg" />
+								<source src="/audio/recording4.mp3" type="audio/mpeg" />
+							</audio>
+							<audio id="recording5" controls preload="auto">
+								<source src="/audio/recording5.ogg" type="audio/ogg" />
+								<source src="/audio/recording5.mp3" type="audio/mpeg" />
+							</audio>
+						</dt>
+						<dt> Evernote Audio Capture <dt>
+						<dd> 
+							Audio recording of me performing the tasks associated with the assignment, both on the MacBook Pro and the iPad.
+						</dd>
+					</dl>	
+				</li>
+			</ul>
+		</section>
+		
+		<h3> Experience: </h3>
+		<section id="macbook">
+			<h4> MacBook Pro </h4>
+			<p>
+				Trying to navigate the Umd website was difficult at best. Part of the problem was a general lack of familiarity with the tools available, but additionally, I had no idea what some of the things on the page were. With my relative visual knowledge of the main UMD.edu page, I was able to assume some of the UI geography, which helped a good deal. In the end, though, I relied heavily on the search functionality, a well-chosen query and a ton of luck to find the answer in the end. Without the search functionality, there is almost no way that I would have navigated quickly to the HCIL site, much less the correct information, within a reasonable amount of time. 
+			</p>
+			<p>
+				Though the controls were very strange, having gone through the tutorial for VoiceOver did help. That being said, I ended up resorting almost wholly to a “tab,tab,tab,enter” type of interaction. It was difficult to find sometimes how to get from the links to the main textual content, and even sometimes difficult to successfully navigate to textual content in between images. 
+			</p>
+			<p>
+				The HCIL website was much friendlier than the UMD one, though to be honest, I was lucky not to spend much time on the main UMD page. I got to the HCIL page rather quickly by searching for ‘HCIL’ and then to the sample student curriculum relatively soon after that. Interestingly enough, I landed on the masters program page with the link to a sample student curriculum from my initial search, but without being able to see the content, I presumed to navigate further into the site, subsequently reaching that same page anyway. 
+			</p>
+			<p>
+				When I finally got to the credit-value for the coursework, however, I’m not sure that the word ‘credits’ was ever present on the page. That being the case, VoiceOver read out “6” or “3” immediately after the course title, but would never tell me that that number referred to credits. Had I not been familiar with UMD’s tendency to have 3-credit regular classes, I might not have known that this number reflected a credit load.
+			</p>
+		</section>
+			<h4> iPad </h4>
+			<p>
+				The task on the iPad was not only more frustrating, but it ended up being nearly impossible. With my eyes closed, I had to stab randomly at the screen in order to get to different portions of the site. Being unfamiliar with the interaction style, I would also resort to random quantities of screen stabbings trying to get from one place on the page to another. As it turns out, one touch causes a selection, while double-tapping a selected item will activate it. This was a pretty tough switch for me. 
+			</p>
+			<p>
+				By several strokes of dumb luck and good guesswork, I was able to type HCIL (I think) into the search bar on the UMD main page. I never made it to the coursework page at the HCIL site, though I did find an interesting article on search engine results within the publications portion of the HCIL site.
+			</p>
+		</section>
+
+		
+	</section>
+{% endblock %}
+
+{% block 'js_include_block' %}
+{% endblock %}
+
+{% block 'js_run_block' %}
+{% endblock %}

@@ -1,0 +1,91 @@
+{% comment %} PROJECT TEMPLATE {% endcomment %}
+
+{% extends "../base/base.html" %}
+{% block 'main' %}
+	<aside>
+		<h3>Section Links</h3>
+		<div id="recent">
+			<ul>
+				<li><a href="#proposal">Phase 1 - Proposal </a></li>
+				<li><a href="#user_needs">Phase 2 - User Needs </a></li>
+				<li><a href="#design">Phase 3 - Design(s) </a></li>
+				<li><a href="#prototype">Phase 4 - Prototype </a></li>
+			</ul>
+		</div>
+	</aside>
+	<section>
+		<header>
+			<h2> Term Project - Victim Finder </h2>
+			<p> Updates, phase deliverables and documentation regarding my term project will reside here. </p>
+		</header>
+		<article id="phase1" class="phase collapsible">
+			<a id="proposal"><h3> Phase 1: Victim Finder Proposal </h3></a>
+			<section>
+				<h4> Team Members </h4>
+				<p> Matthew Rothstein </p>
+			</section>
+			<section>
+				<h4> Project Problem </h4>
+				<p> 
+					The project is inspired by both the recent disaster in Japan and by some of my work dealing with disaster preparedness at the NIH over the last three years. 
+				</p>
+				<p> 
+					The tsunami that devastated Northern Japan did more than level terrain and buildings, it physically took people away. In addition, the disaster overwhelmed the cellular telephone networks, leaving Japan’s residents unable to use their most common means of individual communication. Without this technology, people turned to social mediums such as Facebook and Twitter to communicate with their family and friends#. As a result, these services proved invaluable, helping some people find their loved ones as they also had access to the medium. On the other hand, many victims of the tsunami were either lost or injured and did not have access to social mediums like those mentioned above. In this case, people will be looking on Facebook or Twitter for individuals unable to look back.
+				</p>
+				<p> 
+					VictimFinder will allow people to still leverage the Facebook platform in finding their loved ones who are lost or injured casualties of a disaster. By utilizing the Face.com face identification API, and databases of victim photos such as that being put together by the Lost Person Finder project at the NIH, I hope to be able to ‘locate’ lost individuals through automated facial comparison between victim photos and tagged photos on Facebook. 
+				</p>
+			</section>
+			<section>
+				<h4> Target Users </h4> 
+				<p> There are two major user groups involved in this project: <p>
+				<ol>
+					<li> Family and friends of victims lost or injured in a disaster or emergency situation </li>
+					<li> Disaster response organizations taking photos of victims found or being treated </li>
+				</ol>
+			</section>
+		</article>
+		<article id="phase2" class="phase collapsible">
+			<a id="user_needs"><h3> Phase 2: User needs: Tasks, scenarios, and references (~1,000 - 2,000 words) </h3></a>
+		</article>
+		<article id="phase3" class="phase collapsible">
+			<a id="design"><h3> Phase 3: Design </h3></a>
+			<p> This is a collection initial, rough designs for the user interface. These are subject to change.  </p>
+			<ul class="designs">
+				<li> Design 1 
+					<div class="design_wrapper">
+						<img src="/images/project/victim-finder-wireframe.png"/>
+					</div>
+				</li>
+			</ul>
+		</article>
+		<article id="phase4" class="phase collapsible">	
+			<a id="prototype"><h3> Phase 4: Prototype </h3></a>
+			<article id="prototype_widget">
+				<section id="input">
+					<form id="friend_search" class="search form jsform">
+						<label for="friend_name"> 
+							My friend <input id="friend_name" name="friend_name" type="text" placeholder="John Smith" /> is missing. 
+						</label>
+					</form>
+				</section>
+				<section id="friend_pictures">
+					<p class="section_dialogue">
+						I'm sorry, but we're going to try to look for them. You can help by clicking the pictures below that are NOT
+						of your friend.
+					</p>
+					<div class="pictures search_results"> 
+					</div>
+				</section>
+				<section id="matched_casualties">
+					<p class="section_dialogue">
+						I think we might have found something. Please take a look at these pictures and click those that might be of
+						your friend.
+					</p>
+					<div class="pictures search_results"> 
+					</div>
+				</section>
+			</article>
+		</article>
+	</section>
+{% endblock %}

@@ -1,0 +1,36 @@
+/*
+ * Title: Assignments Stylesheet
+ * Author: Matt Rothstein
+ * 
+ * Contains CSS rules specific to the assignments page. No need to load them
+ * for every page.
+ */
+
+
+/* =============================================================================
+   Assignment Page Styles
+   ========================================================================== */
+
+/* =============================================================================
+   Assignment Aside Styles
+   ========================================================================== */
+aside { width: 280px; }
+aside h4 { font-size: 1.4em; text-shadow: 3px 3px 2px rgb(228,77,38);}
+aside ul { list-style-type: none; border: 0px blue solid; padding-left: 0px; }
+aside ul li { border: 0px red solid; margin-bottom: 5px;  }
+aside ul li a { 
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+	
+	font-weight: bold; 
+	color: white; 
+	text-decoration: none; 
+}
+aside ul li a:visited { color: white; }
+aside ul li a:hover { font-size: 1.3em; color: white; text-shadow: 2px 2px 2px rgb(228,77,38);
+}
+aside ul li ul {  }
+aside ul li ul li {}
+

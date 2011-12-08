@@ -1,0 +1,354 @@
+/*
+ * Title: HW2 Stylesheet
+ * Author: Matt Rothstein
+ * 
+ * Contains CSS rules specific to homework assignment 2. No need to load them
+ * for every page.
+ */
+
+
+/* =============================================================================
+   Homework 2 Styles
+   ========================================================================== */
+#homework2_container {}
+
+#homework2_container #interface_area { 
+	width: 80%; 
+	margin: 0 auto; 
+	
+	padding: 20px; 
+	border: 0px orange solid; 
+	border-radius: 3px; 
+}
+
+/* This is the animation code. */
+@-webkit-keyframes shadowText {
+	from { text-shadow: 0; }
+	to { text-shadow: 2px 2px 2px #949494; }
+}
+
+#homework2_container #interface_area .hint {
+	opacity: 0.6;	
+}
+
+#homework2_container #interface_area .hint:hover {
+
+}
+
+#homework2_container #interface_area .hint .helper-info {  
+	color: rgb( 228, 77, 38 ); 
+	cursor: pointer; 
+	
+	font-weight: bold;
+}
+
+#homework2_container #interface_area .hint .helper-info:hover {
+	/*font-size: 1.1em;
+	border: 2px solid orange;
+	padding: 5px;
+	border-radius: 5px; 
+	
+	background-color: rgb( 228, 77, 38 );
+	color: white;*/
+
+	/*text-shadow: 2px 2px 2px #949494;
+	filter: dropshadow(color=#949494, offx=2, offy=2);*/
+	
+	/*text-shadow: 2px 2px 2px #B5B5B5;
+	filter: dropshadow(color=#B5B5B5, offx=2, offy=2);*/
+	-webkit-animation-name: shadowText;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: ease; /* ease is the default */
+	/*-webkit-animation-delay: 0s;             /* 0 is the default */
+	/*-webkit-animation-iteration-count: 2;    /* 1 is the default */
+	/*-webkit-animation-direction: alternate;  /* normal is the default */
+	-webkit-animation-fill-mode: forwards;
+}
+
+/* UI controls */
+#homework2_container .interface_container .controls { 
+	/*padding: 10px; */
+	margin-bottom: 10px; 
+	
+	/*background-color: rgba( 228, 77, 38, 0.3 ); */
+	
+	font-size: 18px;
+	font-family: helvetica;
+	font-weight: bold;
+	
+	overflow: hidden;
+}
+
+#homework2_container .controls {}
+#homework2_container .controls label { display: block; }
+#homework2_container .controls input { color: rgb( 228, 77, 38 ); }
+#homework2_container .controls input[type="text"] {
+	
+	float: left; 
+	width: 80%;
+	border: 1px darkgrey solid; 
+	border-radius: 5px; 
+	
+	height: 20px;
+	padding: 10px; 
+	
+	box-shadow: inset  -2px 2px 23px rgba(50, 50, 50, 0.43);
+	-moz-box-shadow: inset  -2px 2px 23px rgba(50, 50, 50, 0.43);
+}
+#homework2_container .controls input[type="submit"] {
+	padding: 10px; 
+	
+	float: right;
+	
+	width: 15%;
+}
+
+/* Google Image Search Results Area */
+#homework2_container .google_results_container {
+
+	
+	margin-bottom: 10px;
+	
+	height: 50px; 
+	border: 0px red solid;
+	
+	overflow: hidden;
+}
+
+#homework2_container .google_results_container img {
+	height: 50px; 
+	opacity: .4;
+	
+	-webkit-transition: all 400ms ease-in-out;
+	-moz-transition: all 400ms ease-in-out;
+	-o-transition: all 400ms ease-in-out;
+	transition: all 400ms ease-in-out;
+}
+
+#homework2_container .google_results_container img:hover {
+	cursor: pointer;
+	opacity: .9;
+}
+
+/* Image area */
+#homework2_container .image_container { 
+	/*padding: 10px; */
+	/*background-color: rgba( 0, 129, 241, 0.3);*/
+}
+#homework2_container .image_container img {
+	max-width: 100%; /* make sure that the image doesn't spill out if it is too wide */
+}
+
+/* =============================================================================
+   VoiceOver Exercise Styles
+   ========================================================================== */
+#attached_media {}
+#attached_media .video { margin: 0 auto; }
+#attached_media .video object {}
+#attached_media .video object embed { width: 650px; height: 500px; }
+
+
+/* =============================================================================
+   Temperature Conversion Exercise Styles
+   ========================================================================== */
+figure { border: 1px blue solid; margin: 0 auto; }
+figure div { margin: 0 auto; width: auto; }
+figure div img {}
+figure div figcaption { text-align: center; }
+
+#interface_area .interface { width: 350px; border: 1px gray solid; padding: 20px; padding-top: 10px; overflow: hidden; }
+#interface_area .interface header { margin-bottom: 0; padding-bottom: 0; }
+#interface_area .interface header h1 { 
+	margin: 0; 
+	margin-bottom: 10px; 
+	
+	font-size: 1.2em;
+	color: rgb(228,77,38); 
+	
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+#interface_area .interface .input_controls { border: 0px red solid; position: relative; margin-bottom: 10px; }
+#interface_area .interface .input_controls label { border: 1px solid black; display: block; }
+#interface_area .interface .input_controls input { color: rgb( 228, 77, 38 ); }
+#interface_area .interface .input_controls input[type="text"] { 
+	font-size: 2em;
+	
+	width: 270px;
+	border: 1px darkgrey solid; 
+	border-radius: 5px; 
+
+	height: 30px;
+	padding: 10px; 
+	padding-right: 66px;
+	
+
+	box-shadow: inset  -2px 2px 23px rgba(50, 50, 50, 0.43);
+	-moz-box-shadow: inset  -2px 2px 23px rgba(50, 50, 50, 0.43);
+	
+
+}
+
+#interface_area .interface input[type="submit"] { 
+	width: 100px; 
+	height: 50px; 
+	
+	float: right;
+	
+	color: white;
+	
+	color: #262626;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0px 1px 0 rgba(255, 255, 255, .15);
+	
+	border: 1px lightgray solid;
+	border-radius: 5px;
+	background-color: rgb(241,101,41);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+
+	background-image: -webkit-gradient(linear, left top, left bottom,
+                                       from(rgba(255, 255, 255, .1)), to(rgba(255, 255, 255, 0)));
+
+    background-image: -moz-linear-gradient(0 0 -90deg,
+                                           rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
+
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+    -moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+
+}
+#interface_area .interface input[type="submit"]:active { 
+	background-color: rgb(234,94,34); 
+	
+	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+                        inset 0 0 5px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+                     inset 0 0 5px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+                inset 0 0 5px rgba(0, 0, 0, .1);
+	
+}
+
+#interface_area .interface .result { 
+
+	height: 50px; 
+	
+	float: left;
+	
+}
+
+#interface_area .interface .result p { 
+	font-size: 1.5em;
+	
+	display: inline;
+	
+	line-height: 50px;
+}
+
+#interface_area .interface .result p span {
+	color: rgb(241,101,41);
+	font-weight: bold;
+}
+
+/* main orange: rgb(241,101,41)
+/* Segmented controls */
+.segmented-control {
+	position: absolute; 
+	right: 15px; 
+	top: 7.5px;
+	
+	
+    background-color: #333;
+    width: 51px;
+    height: 35px;
+    padding: 1px;
+    margin: 0 auto;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+}
+.segmented-control li {
+	
+	list-style-type: none; 
+    background-image: -webkit-gradient(linear, left top, left bottom,
+                                       from(rgba(255, 255, 255, .1)), to(rgba(255, 255, 255, 0)));
+
+    background-image: -moz-linear-gradient(0 0 -90deg,
+                                           rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
+
+    background-color: rgb(241,101,41);
+    float: left;
+    margin-left: 1px;
+
+    -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+    -moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+}
+
+.segmented-control a {
+    color: #262626;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0px 1px 0 rgba(255, 255, 255, .15);
+    display: block;
+    width: 25px;
+    height: 35px;
+}
+
+.segmented-control li:first-child {
+    margin-left: 0;
+
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.segmented-control li:last-child {
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.segmented-control li:active {background-color: rgb(234,94,34);}
+
+.segmented-control li:active,
+.segmented-control.alt li:target:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+                        inset 0 0 5px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+                     inset 0 0 5px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+                inset 0 0 5px rgba(0, 0, 0, .1);
+}
+
+.segmented-control li:active a,
+.segmented-control.alt li:active a {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+    position: relative;
+    top: 1px;
+}
+
+.segmented-control li.selected { 
+	background-color: rgb(202,62,2); 
+	
+	
+}

@@ -1,0 +1,84 @@
+{% comment %} HOMEWORK3 TEMPLATE {% endcomment %}
+
+{% extends "../../base/base.html" %}
+
+{% block 'stylesheet_head_block' %}
+<link rel="stylesheet" href="/css/hw4/custom.css" type="text/css">
+{% endblock %}
+
+{% block 'header' %}
+	<h1 id="title"> LBSC795 </h1>
+	{% include "../../base/nav.html" %}
+{% endblock %}
+
+{% block 'main' %}
+	<section id="homework3_container">
+		<header>
+			<h2> A Grounded Critique of Spotify </h2>
+			<h3> <a class="download_link" href="/files/Assignment4-GroundedCritique-Spotify.pdf"> Download PDF </a> </h3>
+		</header>
+		
+		<section class="overview">
+			<h2> Major Usability Problems</h2>
+			<ul>
+				<li> Poor Readability </li>
+				<li> External Locus of Control </li>
+			</ul>
+		</section>
+		
+		<section class="details">
+			<h2> Poor Readability </h2>
+			<p>
+				Spotify’s interface is not very readable. Inordinately small fonts, thin text, relatively low contrast and inconsistent textual highlighting all make digesting the content of the application very difficult. 
+			</p>
+			<p>
+				The color scheme of the entire application, excepting images and external content, lives within a narrow sliver of the palette: grays between RGB(160,160,160) and RGB(40,40,40). 
+			</p>	
+				<figure id="screenshot1">
+					<div> 
+						<img src="/images/hw4/playlists.png"/>
+						<figcaption> Saved Playlists </figcaption>
+					</div>
+				</figure>
+			
+			<p>
+				So while the contrast within this range can be adequate for the text itself, an overall lack of contrast in the interface overwhelms much of the important text and makes it difficult to find. Additionally, the font size of these and other major text heavy controls provides an initial, independent stumbling block to user discovery of the content or control mechanisms. When these things are crucial for users to reach central functionality, they feel the second major usability concern. 
+			</p>
+		</section>
+		<section class="details">
+			<h2> External Locus of Control </h2>
+			<p>
+				Applications should strive for providing users with a strong internal locus of control. They should have a clear sense that they are masters of their own destinies within the interface. Spotify denies the user this by providing little to no feedback for many user actions, very little guidance to functionality, confusing calls to action unrelated to functionality and a disregard for common application convention.
+			</p>
+			<p>
+				Poor readability and contrast within the UI and difficult to find major controls can leave the user confused and hesitant; likely to wait for direction rather than actively stepping forward toward content. 
+			</p>
+			<p>
+				Very few of the buttons within the interface provide any feedback on mouseover, leading to user uncertainty about what functions are available to them. With little confidence in what options are available to them, users cannot be confident in their ability to navigate toward a particular functionality. In addition, this establishes a significant cognitive burden for users learning the system, because they are forced to remember functionality that could easily be visually indicated to them with simple feedback additions. 
+			</p>
+			<p>
+				Some widgets can be interacted with several different ways, each of which produces a different result, but there is no indication of what those ways might be or what results each method may produce. 
+			</p>
+			
+			<figure id="screenshot2">
+				<div> 
+					<img src="/images/hw4/songs_albums.png"/>
+					<figcaption> Featured Songs and Albums </figcaption>
+				</div>
+			</figure>
+			
+			<p>
+				For instance, each of the cells in the above screenshot may be clicked, double-clicked, activated with the “Enter” key. If a user is selecting an item in the “Tracks” column, double-clicking or hitting “Enter” results in playing a song. In the “Albums” column, either action takes the user to a track listing for that album. 
+			</p>
+			<p>
+				Though Spotify’s interface does not visually highlight many of its primary, relevant pieces of functionality, it does have multiple calls to action related to upgrading the user plan. On entry into the application, a user is likely more aware of how to upgrade than how to access their library. These confusing calls to action, in addition to strange keyboard shortcuts, search bar placement and library interaction make it extremely difficult for a user to feel in control of their experience when interacting with the Spotify desktop client. 
+			</p>
+		</section>
+	</section>
+{% endblock %}
+
+{% block 'js_include_block' %}
+{% endblock %}
+
+{% block 'js_run_block' %}
+{% endblock %}

@@ -1,0 +1,41 @@
+application: lbsc795
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: static/css
+
+- url: /images
+  static_dir: static/images
+
+- url: /js
+  static_dir: static/js
+
+- url: /audio
+  static_dir: static/audio
+
+- url: /video
+  static_dir: static/video
+
+- url: /files/.*
+  static_dir: static/files
+
+- url: /assignments/.*
+  script: scripts/assignments.py
+
+- url: /project/.*
+  script: scripts/project.py
+
+- url: /resources/.*
+  script: scripts/resources.py
+
+- url: /contact/.*
+  script: scripts/contact.py
+
+- url: /.*
+  script: scripts/main.py
+
+builtins:
+- datastore_admin: on

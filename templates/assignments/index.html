@@ -1,0 +1,94 @@
+{% comment %} ASSIGNMENTS TEMPLATE {% endcomment %}
+
+{% extends "../base/base.html" %}
+
+{% block 'stylesheet_head_block' %}
+<link rel="stylesheet" href="/css/assignments.css?v=1">
+{% endblock %}
+
+{% block 'main' %}
+	<aside>
+		<h3>Section Links</h3>
+		<h4>Assignments &amp; Homeworks</h4>
+		<ul>
+			<li><a href="#homework1"> Website Review </a></li>
+			<li><a href="#homework2"> Javascript Image Retriever </a></li>
+			<li><a href="#homework3"> CSS Pizza Painter </a></li>
+			<li><a href="#homework4"> Grounded Critique </a></li>
+		</ul>
+		<h4>Exercises</h4>
+		<ul>
+			<li><a href="#hotel_interface"> Hotel Room Interface </a></li>
+			<li><a href="#donation_interface"> Donation Site Interface </a></li>
+			<li><a href="#voiceover_navigation"> Voiceover Navigation of UMD.edu </a></li>
+			<li><a href="#temperature_interface"> Temperature Conversion Interface </a></li>
+		</ul>
+		</ul>
+	</aside>
+	<section>
+		<header>
+			<h2> Assignments </h2>
+			<p> Completed assignments will be listed below.  </p>
+		</header>
+		<section id="homeworks">
+			<h3> Homeworks </h3>
+			<article class="assignment" title="homework 1">
+				<h1> <a href="http://db.tt/k99xlh0j" alt="click to download!"  id="homework1"> Website Review </a> </h1>
+				<p> A one-page (ish) critique of Hipster.com. It is loosely related to travel in that the purpose and focus is on sharing geographically relevant messages containing pictures in the form of digital postcards. </p>
+			</article>
+			<article class="assignment" title="homework 2">
+				<h1> <a href="/assignments/homework/2/" id="homework2"> Javascript Image Retriever </a> </h1>
+				<p class="description">
+					A simple page that allows users to call up images based on a URL.
+				</p>
+			</article>
+			<article class="assignment" title="homework 3">
+				<h1> <a href="/assignments/homework/3/" id="homework3"> CSS Assignment: A Modest Pizza Builder  </a> </h1>
+				<p class="description">
+					An interface designed to help users build a pizza with their choices of toppings. It heavily leverages CSS and Javascript. 
+				</p>
+			</article>
+			<article class="assignment" title="homework 4">
+				<h1> <a href="/assignments/homework/4/" id="homework4"> A Grounded Critique of Spotify  </a> </h1>
+				<p class="description">
+					A critique of Spotify's user interface grounded in HCI concepts learned over the course of this semester's class. 
+				</p>
+			</article>
+		</section>
+		<section id="exercises">
+			<h3> Exercises </h3> 
+			<article class="exercise" title="hotel room touchscreen controls">
+				<h1> <a href="#" alt="no link yet" id="hotel_interface"> Hotel Room Interface Idea </a> </h1>
+				<p class="description">
+					An in class exercise where we worked in groups to come up with a touch-screen interface for a hotel room. We geared our functionality toward perceived common 
+					use-cases involving lighting, temperature and entertainment.
+				</p>
+				<p> No link yet </p>
+			</article>
+			<article class="exercise" title="donation website interface">
+				<h1> <a href="#" alt="no link yet" id="donation_interface"> Donation Website Interface </a> </h1>
+				<p class="description">
+					An in class exercise where we worked in groups to come up with an innovative web-based interface for donations. Our concept was geared towards individuals
+					donating to individuals and featured a node-map visualization of needs as it's prominent interface component. 
+				</p>
+				<p> Images to follow </p>
+			</article>
+			<article class="exercise" title="voiceover navigation task">
+				<h1> <a href="/assignments/exercise/voiceover/" id="voiceover_navigation"> VoiceOver Navigation of Umd.edu </a> </h1>
+				<p class="description">
+					We were tasked with finding the credit value of the HCIL Masters Capstone Project / Thesis by navigating from http://www.umd.edu with no visual input. 
+					We used only the OS/device's native accessibility features to accomplish this. I used a MacBook Pro (OSX Lion) and an iPad (1st Gen) to complete the task. Both
+					devices were equipped with Apple's VoiceOver for visually impaired users.
+				</p>
+			</article>
+			<article class="exercise" title="temperature conversion interface and fitt's law">
+				<h1> <a href="/assignments/exercise/temperature/" id="temperature_interface"> Temperature Conversion Interface & Fitt's Law Exercise </a> </h1>
+				<p class="description">
+					We were tasked with proposing a redesign of a presented temperature conversion interface. The goal was to make an interface 
+					whose average time to completion (T<sub>F</sub>), as calculated with Fitt's Law, was as low as possible. 
+				</p>
+			</article>
+		</section>
+		
+	</section>
+{% endblock %}

@@ -1,0 +1,226 @@
+{% comment %} HOMEWORK3 TEMPLATE {% endcomment %}
+
+{% extends "../../base/base.html" %}
+
+{% block 'stylesheet_head_block' %}
+<link rel="stylesheet" href="/css/hw3/custom.css" type="text/css">
+{% endblock %}
+
+{% block 'header' %}
+	<h1 id="title"> Matt - LBSC795 </h1>
+	{% include "../../base/nav.html" %}
+{% endblock %}
+
+{% block 'main' %}
+	<section id="homework3_container">
+		<header>
+			<h2> Homework Assignment 3 - A Modest Pizza Builder </h2>
+		</header>
+		
+		<h3> Description: </h3>
+		<p class="description"> 
+			The interface below will allow users to build a delicious and affordable pizza from the available toppings. 
+		</p>
+		
+		<h3> Interface: </h3>
+		<div id="interface_area" class="interface">
+			<article id="pizza_widget">
+				<header>
+					<h1> A Modest Pizza Painter! </h1>
+			    </header>
+				<div id="interface_wrapper">
+					<section id="pizza_view">
+						<header>
+							<aside id="pizza_controls">
+								<section id="size_controls" class="controls_section">
+									<h1> Choose your size! </h1>
+									<div class="button_wrapper">
+										<button id="small" class="button size">
+											Small
+											<input type="radio" name="size" value="small" />
+										</button>
+									</div>
+									<div class="button_wrapper">
+										<button id="medium" class="button size selected">
+											Medium
+											<input type="radio" name="size" value="medium" />
+										</button>
+									</div>
+									<div class="button_wrapper">
+										<button id="large" class="button size">
+											Large
+											<input type="radio" name="size" value="large" />
+										</button>
+									</div>
+								</section>	
+								<section id="crust_controls" class="controls_section">
+									<h1> Choose your crust! </h1>
+									<div class="button_wrapper">
+										<button id="thin_crust" class="button crust">
+											Thin Crust
+											<input type="radio" name="crust" value="thin"/>
+										</button>
+									</div>
+									<div class="button_wrapper">
+										<button id="thick_crust" class="button crust">
+											Thick Crust
+											<input type="radio" name="crust" value="thick" />
+										</button>
+									</div>
+									<div class="button_wrapper">
+										<button id="cheese_crust" class="button crust">
+											Cheese Crust
+											<input type="radio" name="crust" value="cheese" />
+										</button>
+									</div>
+								</section>
+							</aside>
+						</header>
+						<div class="pizza_display">
+							<section id="pizza">
+								<div id="outer_crust">
+									<div id="inner_crust">
+										<div id="sauce">
+											<div id="cheese" class="orange">
+											</div>
+										</div>
+									</div>
+						 		</div>
+							</section>
+						</div>
+
+						<footer>
+							<div id="pizza_info" open="open">
+								<div id="price_wrapper">
+									<p id="price"> $10.00 </p>
+								</div>
+							</div>
+							<div id="order_wrapper">
+								<button id="order_pizza" class="fancy_button" value="Order!">
+									<span class="button_text" style="">Order!</span>
+									<!-- Order! -->
+								</button>
+
+								<!-- <a class="fancy_button" href="#">
+								  <span style="background-color: #070;">Post</span>
+								</a> -->
+							</div>
+						</footer>
+					</section>
+
+					<aside id="topping_controls">
+						<section id="cheese_controls" class="controls_section">
+							<h1> Choose your cheese! </h1>
+							<div class="button_wrapper">
+								<button id="white_cheese" class="button cheese"  type="white">
+									White Cheese
+									<input type="checkbox" name="size" />
+								</button>
+							</div>
+							<div class="button_wrapper">
+								<button id="yellow_cheese" class="button cheese" type="yellow">
+									Yellow Cheese
+									<input type="checkbox" name="size" />
+								</button>
+							</div>
+							<div class="button_wrapper">
+								<button id="orange_cheese" class="button cheese" type="orange">
+									Orange Cheese!
+									<input type="checkbox" name="size" />
+								</button>
+							</div>
+						</section>
+						<section id="veggies" class="controls_section">
+							<h1> Veggies </h1>
+							<div class="controls_row">
+								<div class="button_wrapper">
+									<button id="mushroom_veggies" class="button topping_control" type="mushroom">
+										Mushrooms
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+								<div class="button_wrapper">
+									<button id="tomato_veggies" class="button topping_control" type="tomato">
+										Tomatoes
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+								<div class="button_wrapper">
+									<button id="onion_veggies" class="button topping_control" type="onion">
+										Onions
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+							</div>
+							<div class="controls_row">
+								<div class="button_wrapper">
+									<button id="green_pepper_veggies" class="button topping_control" type="green_pepper">
+										Green Peppers
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+								<div class="button_wrapper">
+									<button id="red_pepper_veggies" class="button topping_control" type="red_pepper">
+										Red Peppers
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+								<div class="button_wrapper">
+									<button id="garlic_veggies" class="button topping_control" type="garlic">
+										Garlic
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+							</div>
+						</section>
+						<section id="meat" class="controls_section">
+							<h1> Meat </h1>
+							<div class="controls_row">
+								<div class="button_wrapper">
+									<button id="pepperoni_meat" class="button topping_control" type="pepperoni">
+										Pepperoni
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+								<div class="button_wrapper">
+									<button id="hamburger_meat" class="button topping_control" type="hamburger">
+										Hamburger
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+								<div class="button_wrapper">
+									<button id="ham_meat" class="button topping_control" type="ham">
+										Ham
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+							</div>
+							<div class="controls_row center">
+								<div class="button_wrapper">
+									<button id="baby_boy_meat" class="button topping_control" type="boy">
+										Boy Meat
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+								<div class="button_wrapper">
+									<button id="baby_girl_meat" class="button topping_control" type="girl">
+										Girl Meat
+										<input type="checkbox" name="size" />
+									</button>
+								</div>
+							</div>
+						</section>
+					</aside>
+				</div>
+			</article>
+		</div>
+	</section>
+{% endblock %}
+
+{% block 'js_include_block' %}
+<script src="/js/hw3/script.js"></script>
+<script src="/js/hw3/createToppings.js"></script>
+{% endblock %}
+
+{% block 'js_run_block' %}
+{% endblock %}
